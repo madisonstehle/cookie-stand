@@ -12,20 +12,31 @@ var seattleShop = {
     cookiesEachHour: [],
     totalCookiesForDay: 0,
     
-    cookiesEachHour: function() {
+        randomCustomerNumber: function() {
         return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
     },
 
     render: function() {
         for (var i = 0; i < hours.length; i++) {
+            this.customersEachHour.push(this.randomCustomerNumber());
+
+            var hourlyCookies = this.customersEachHour[i]*this.avgCookieSale;
+            hourlyCookies = Math.round(hourlyCookies);
+            this.cookiesEachHour.push(hourlyCookies);
+
+            this.totalCookiesForDay += this.cookiesEachHour[i];
+
             var liEl = document.createElement('li');
-            liEl.textContent = `${hours[i]} cookies: ${this.cookiesEachHour()}`;
+
+            liEl.textContent = `${hours[i]} cookies: ${this.cookiesEachHour[i]}`;
+
             seattleElement.appendChild(liEl);
-            // console.log(i);
         }
+        liEl.textContent = `Total for the Day: ${this.totalCookiesForDay}`;
         return liEl;
     }
 }
+
 seattleShop.render();
 
 var tokyoShop = {
