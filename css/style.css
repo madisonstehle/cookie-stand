@@ -1,9 +1,49 @@
+/* Colors based on Salmon */
+/* Dark: #21231E, Dark Orange: #AD5334, Light Orange: #B87544, Yellow-Beige: #D6BA7B, Purple-Grey: #A3887D, Green-Grey: #B8AD98 */
+
+body {
+    background-color:#B8AD98;
+}
+
+header {
+    display: inline-block;
+    text-align: center;
+    margin: auto 0px;
+    width: 100%;
+    box-shadow: 2px 3px 5px;
+    background-color: white;
+    padding-top: 10px; 
+}
+
 h1 {
-    font-family: 'McLaren', cursive;
-    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
 }
 
 h2 {
-    font-family: 'McLaren', cursive;
+    font-family: 'Lobster', cursive;
     font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    background-color: #21231E;
+}
+li a {
+    display: block;
+    color:#D6BA7B;
+    text-decoration: none;
+    padding: 2px;
+    text-align: left;
+}
+
+img {
+    background-color: white;
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    padding: 15px;
 }
