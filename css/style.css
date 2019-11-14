@@ -1,9 +1,68 @@
-h1 {
-    font-family: 'McLaren', cursive;
-    font-size: 40px;
+/* Colors based on Salmon */
+/* Dark: #21231E, Dark Orange: #AD5334, Light Orange: #B87544, Yellow-Beige: #D6BA7B, Purple-Grey: #A3887D, Green-Grey: #B8AD98 */
+
+body {
+    background-color:#B8AD98;
 }
 
+header {
+    display: inline-block;
+    text-align: center;
+    margin: auto 0px;
+    width: 100%;
+    box-shadow: 2px 3px 10px;
+    background-color: white;
+    padding-top: 10px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
 h2 {
-    font-family: 'McLaren', cursive;
+    font-family: 'Lobster', cursive;
     font-size: 20px;
+}
+h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 55px;
+    height: max-content;
+    position: fixed; 
+    background-color: #21231E;
+    top: 0;
+}
+li.nav a {
+    display: block;
+    color:#D6BA7B;
+    text-decoration: none;
+    padding: 3px;
+    text-align: left;
+    font-size: 16px;
+}
+li.nav a:hover {
+background-color: lightgrey;
+color: #AD5334;
+}
+
+
+img {
+    background-color: white;
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    padding: 15px;
+}
+
+h2.store {
+    margin-top: 20px;
+}
+ul.store {
+    margin-top: 2px;
 }
