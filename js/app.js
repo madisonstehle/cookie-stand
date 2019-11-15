@@ -37,8 +37,12 @@ Store.prototype.finalCookiesEachHour = function() {
 }
 
 new Store('Seattle', 23, 65, 6.3, [], []);
+new Store('Tokyo', 3, 24, 1.2, [], []);
+new Store('Dubai', 11, 38, 3.7, [], []);
+new Store('Paris', 20, 38, 2.3, [], []);
+new Store('Lima', 2, 16, 4.6, [], []);
 
-console.log(storeList[0]);
+console.log(storeList[0].storeName);
 
 var table = document.getElementById('tableContainer');
 
@@ -49,12 +53,29 @@ var trEl = document.createElement('tr');
 
 // HEADER
 function tableHeader() {
+    for (var i = 0; i < storeList.length; i++)
     trEl = document.createElement('tr');
     thEl = document.createElement('th');
-    thEl.textContent = 'COLUMN';
+    thEl.textContent = 'HEADER YAY';
     trEl.appendChild(thEl);
     tbodyEl.appendChild(trEl);
 }
 
+function makeDataRow() {
+    for (var i = 0; i < storeList.length; i++) {
+        trEl = document.createElement('tr');
+        thEl = document.createElement('th');
+        thEl.textContent = storeList[i].storeName;
+        trEl.appendChild(thEl);
+        for (var j = 1; j < hours.length; j++) {
+            tdEl = document.createElement('td');
+            tdEl.textContent = 'one';
+            trEl.appendChild(tdEl);
+        }
+    }
+tbodyEl.appendChild(trEl);
+}
+
 tableHeader();
+makeDataRow();
 table.appendChild(tbodyEl);
