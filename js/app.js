@@ -49,12 +49,29 @@ var trEl = document.createElement('tr');
 
 // HEADER
 function tableHeader() {
+    for (var i = 0; i < storeList.length; i++)
     trEl = document.createElement('tr');
     thEl = document.createElement('th');
-    thEl.textContent = 'COLUMN';
+    thEl.textContent = 'HEADER YAY';
     trEl.appendChild(thEl);
     tbodyEl.appendChild(trEl);
 }
 
+function makeDataRow() {
+    for (var i = 0; i < storeList.length; i++) {
+        trEl = document.createElement('tr');
+        thEl = document.createElement('th');
+        thEl.textContent = storeList[i][0];
+        trEl.appendChild(thEl);
+        for (var j = 1; j < hours.length; j++) {
+            tdEl = document.createElement('td');
+            tdEl.textContent = 'one';
+            trEl.appendChild(tdEl);
+        }
+    }
+tbodyEl.appendChild(trEl);
+}
+
 tableHeader();
+makeDataRow();
 table.appendChild(tbodyEl);
