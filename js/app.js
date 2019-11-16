@@ -96,12 +96,30 @@ Store.prototype.makeDataRow = function() {
     tbodyEl.appendChild(trEl);
 };
 
-// var makeFooterRow = function() {
-//     var trEl = document.createElement('tr');
-//     var thEl = document.createElement('th');
-//     thEl.textContent = 'Hourly Totals';
-//     trEl.appendChild(thEl);
-// }
+var makeFooterRow = function() {
+    var trEl = document.createElement('tr');
+    var thEl = document.createElement('th');
+    thEl.textContent = 'Hourly Totals';
+    trEl.appendChild(thEl);
+
+    for (var i = 0; i < Store.hours.length; i++) {
+        var storesHourlyTotals = 0;
+        var tdEl = document.createElement('td');
+
+        for (var j = 0; j < Store.storeList.length; j++) {
+            storesHourlyTotals += Store.storeList[j].cookiesEachHour[i];
+        }
+
+        tdEl.textContent = storesHourlyTotals;
+        trEl.appendChild(tdEl);
+    }
+
+    tdEl = document.createElement('td');
+    tdEl.textContent = Store.allStoresTotal;
+    trEl.appendChild(tdEl);
+
+    tbodyEl.appendChild(trEl);
+}
 
 // LET'S MAKE STORES
 new Store('Seattle', 23, 65, 6.3, [], []);
@@ -109,5 +127,7 @@ new Store('Tokyo', 3, 24, 1.2, [], []);
 new Store('Dubai', 11, 38, 3.7, [], []);
 new Store('Paris', 20, 38, 2.3, [], []);
 new Store('Lima', 2, 16, 4.6, [], []);
+
+makeFooterRow();
 
 table.appendChild(tbodyEl);
