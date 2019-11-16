@@ -131,3 +131,19 @@ new Store('Lima', 2, 16, 4.6, [], []);
 makeFooterRow();
 
 table.appendChild(tbodyEl);
+
+// FORMS
+
+var userInputForm = document.getElementById('userForm');
+userInputForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    console.log('New Store Location: ', event.target.inputStoreName.value);
+
+    event.target.inputStoreName.value = null;
+    event.target.inputMinCust.value = null;
+    event.target.inputMaxCust.value = null;
+    event.target.inputAvgCookies.value = null;
+}
