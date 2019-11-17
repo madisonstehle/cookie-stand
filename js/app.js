@@ -7,7 +7,7 @@ Store.storeList = [];
 Store.allStoresTotal = 0;
 
 // CONSTRUCTOR FUNCTION
-function Store(name, minCust, maxCust, avgCookieSale, [], []) {
+function Store(name, minCust, maxCust, avgCookieSale) {
     this.storeName = name;
     this.minCust = minCust;
     this.maxCust = maxCust;
@@ -94,6 +94,7 @@ Store.prototype.makeDataRow = function() {
     trEl.appendChild(tdEl);
 
     tbodyEl.appendChild(trEl);
+    // console.log('lastChild: ', tbodyEl.lastChild);
 };
 
 var makeFooterRow = function() {
@@ -122,11 +123,11 @@ var makeFooterRow = function() {
 }
 
 // LET'S MAKE STORES
-new Store('Seattle', 23, 65, 6.3, [], []);
-new Store('Tokyo', 3, 24, 1.2, [], []);
-new Store('Dubai', 11, 38, 3.7, [], []);
-new Store('Paris', 20, 38, 2.3, [], []);
-new Store('Lima', 2, 16, 4.6, [], []);
+new Store('Seattle', 23, 65, 6.3);
+new Store('Tokyo', 3, 24, 1.2);
+new Store('Dubai', 11, 38, 3.7);
+new Store('Paris', 20, 38, 2.3);
+new Store('Lima', 2, 16, 4.6);
 
 makeFooterRow();
 
@@ -139,11 +140,33 @@ userInputForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
+    var newStoreName = event.target.inputStoreName.value;
+    var newMinCust = event.target.inputMinCust.value;
+    var newMaxCust = event.target.inputMaxCust.value;
+    var newAvgCookies = event.target.inputAvgCookies.value;
     
-    console.log('New Store Location: ', event.target.inputStoreName.value);
+    console.log('lastChild before: ', tbodyEl.lastChild);
+
+    table.deleteRow(-1);
+
+    new Store(newStoreName, newMinCust, newMaxCust, newAvgCookies);
+
+    console.log('lastChild during: ', tbodyEl.lastChild);
+
+    // var wholeTable = document.getElementById('tableContainer');
+    // wholeTable.removeChild(makeFooterRow());
+
+    // document.getElementById('tableContainer').deleteTFoot();
+    // var footer = wholeTable.lastChild;
+    // wholeTable.removeChild(footer);
+
+    console.log('lastChild after: ', tbodyEl.lastChild);
 
     event.target.inputStoreName.value = null;
     event.target.inputMinCust.value = null;
     event.target.inputMaxCust.value = null;
     event.target.inputAvgCookies.value = null;
+    
+    makeFooterRow();
 }
+
