@@ -97,6 +97,7 @@ Store.prototype.makeDataRow = function() {
     // console.log('lastChild: ', tbodyEl.lastChild);
 };
 
+// FOOTER ROW
 var makeFooterRow = function() {
     var trEl = document.createElement('tr');
     var thEl = document.createElement('th');
@@ -145,22 +146,13 @@ function handleSubmit(event) {
     var newMaxCust = event.target.inputMaxCust.value;
     var newAvgCookies = event.target.inputAvgCookies.value;
     
-    console.log('lastChild before: ', tbodyEl.lastChild);
+    newMinCust = parseInt(newMinCust, 10);
+    newMaxCust = parseInt(newMaxCust, 10);
+    newAvgCookies = parseInt(newAvgCookies, 10);
 
     table.deleteRow(-1);
 
     new Store(newStoreName, newMinCust, newMaxCust, newAvgCookies);
-
-    console.log('lastChild during: ', tbodyEl.lastChild);
-
-    // var wholeTable = document.getElementById('tableContainer');
-    // wholeTable.removeChild(makeFooterRow());
-
-    // document.getElementById('tableContainer').deleteTFoot();
-    // var footer = wholeTable.lastChild;
-    // wholeTable.removeChild(footer);
-
-    console.log('lastChild after: ', tbodyEl.lastChild);
 
     event.target.inputStoreName.value = null;
     event.target.inputMinCust.value = null;
