@@ -79,9 +79,9 @@ tableHeader();
 // DATA ROWS
 Store.prototype.makeDataRow = function() {
     var trEl = document.createElement('tr');
-    var thEl = document.createElement('th');
-    thEl.textContent = this.storeName;
-    trEl.appendChild(thEl);
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.storeName;
+    trEl.appendChild(tdEl);
     
     for (var i = 0; i < this.cookiesEachHour.length; i++) {
         var tdEl = document.createElement('td');
@@ -100,9 +100,9 @@ Store.prototype.makeDataRow = function() {
 // FOOTER ROW
 var makeFooterRow = function() {
     var trEl = document.createElement('tr');
-    var thEl = document.createElement('th');
-    thEl.textContent = 'Hourly Totals';
-    trEl.appendChild(thEl);
+    var tdEl = document.createElement('td');
+    tdEl.textContent = 'Hourly Totals';
+    trEl.appendChild(tdEl);
 
     for (var i = 0; i < Store.hours.length; i++) {
         var storesHourlyTotals = 0;
