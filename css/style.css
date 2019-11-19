@@ -60,6 +60,7 @@ img {
     padding: 15px;
 }
 
+/* Table */
 #tableContainer {
     border: 50px #AD5334;
     overflow: auto;
@@ -88,6 +89,21 @@ th {
 
 tr:hover {
     background-color: lightgray;
+}
+
+/* Forms */
+fieldset {
+    border: 1px solid #21231E;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    background-color: seashell;
+    border: 1px solid #21231E;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
 }
 
 input:focus {

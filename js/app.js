@@ -135,7 +135,6 @@ makeFooterRow();
 table.appendChild(tbodyEl);
 
 // FORMS
-
 var userInputForm = document.getElementById('userForm');
 userInputForm.addEventListener('submit', handleSubmit);
 
