@@ -9,7 +9,6 @@ header {
     display: inline-block;
     text-align: center;
     margin: auto 0px;
-    height: 175px;
     width: 100%;
     box-shadow: 2px 3px 10px;
     background-color: white;
@@ -26,6 +25,7 @@ h2 {
 h3 {
     font-family: 'Lobster', cursive;
     font-size: 16px;
+    color: #AD5334;
 }
 h4 {
     font-weight: bold;
@@ -36,7 +36,7 @@ ul.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 55px;
+    width: 60px;
     height: max-content;
     position: fixed; 
     background-color: #21231E;
@@ -48,7 +48,7 @@ li.nav a {
     text-decoration: none;
     padding: 3px;
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
 }
 li.nav a:hover {
     background-color: lightgrey;
@@ -60,7 +60,7 @@ p, address {
 }
 
 #top {
-    border: 2px solid #AD5334;
+    border-bottom: 1px solid #21231E;
     margin-top: 20px;
     text-align: center;
 }
@@ -69,12 +69,12 @@ p, address {
     align-content: left;
     margin-top: 10px;
     margin-right: 10px;
+    margin-bottom: 15px;
     display: inline-block;
-    border: 2px solid #21231E;
     width: 30%;
 }
 
-#happyFamily {
+#frostedCookie {
     align-items: center;
 }
 
@@ -82,35 +82,47 @@ p, address {
     align-content: right;
     margin-top: 10px;
     margin-left: 10px;
+    margin-bottom: 15px;
     display: inline-block;
-    border: 2px solid #21231E;
     width: 30%;
 }
 
 .mapouter {
     float: right;
     clear: both;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 #locationContainer {
+    display: inline-block;
     border: 3px solid #21231E;
+    width: 50%;
+    margin-left: 20px;
 }
 
 #titleLocation {
     margin: 10px;
 }
 #footerHours {
-    display: inline-block;
+    float: left;
+    margin-left: 20%;
+    width: 30%;
+    text-align: left;
 }
 #footerContact {
-    display: inline-block;
+    float: right;
+    margin-right: 20%;
+    width: 30%;
+    text-align: left;
 }
 
 footer {
+    text-align: center;
     display: inline-block;
     margin: auto 0px;
     width: 100%;
-    height: 50px;
+    height: 70px;
     background-color: seashell;
     padding-bottom: 0px;
 }
