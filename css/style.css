@@ -9,35 +9,12 @@ header {
     display: inline-block;
     text-align: center;
     margin: auto 0px;
+    height: 175px;
     width: 100%;
     box-shadow: 2px 3px 10px;
     background-color: white;
     padding-top: 10px;
 }
-
-footer {
-    display: inline-block;
-    margin: auto 0px;
-    width: 100%;
-    height: 200px;
-    background-color: seashell;
-    padding-bottom: 0px;
-}
-
-h4 {
-    font-weight: bold;
-}
-
-#footerLocation {
-    display: inline-block;
-}
-#footerHours {
-    display: inline-block;
-}
-#footerContact {
-    display: inline-block;
-}
-
 h1 {
     font-family: 'Lobster', cursive;
     font-size: 50px;
@@ -50,7 +27,11 @@ h3 {
     font-family: 'Lobster', cursive;
     font-size: 16px;
 }
+h4 {
+    font-weight: bold;
+}
 
+/* NAV */
 ul.nav {
     list-style-type: none;
     margin: 0;
@@ -74,8 +55,67 @@ li.nav a:hover {
     color: #AD5334;
 }
 
+p, address {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
-img {
+#top {
+    border: 2px solid #AD5334;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#content1 {
+    align-content: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 2px solid #21231E;
+    width: 30%;
+}
+
+#happyFamily {
+    align-items: center;
+}
+
+#content3 {
+    align-content: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    border: 2px solid #21231E;
+    width: 30%;
+}
+
+.mapouter {
+    float: right;
+    clear: both;
+}
+
+#locationContainer {
+    border: 3px solid #21231E;
+}
+
+#titleLocation {
+    margin: 10px;
+}
+#footerHours {
+    display: inline-block;
+}
+#footerContact {
+    display: inline-block;
+}
+
+footer {
+    display: inline-block;
+    margin: auto 0px;
+    width: 100%;
+    height: 50px;
+    background-color: seashell;
+    padding-bottom: 0px;
+}
+
+#logo {
     background-color: white;
     display: block;
     text-align: center;
