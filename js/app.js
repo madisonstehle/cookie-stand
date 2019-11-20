@@ -51,6 +51,14 @@ Store.prototype.finalCookiesEachHour = function() {
 };
 
 
+// HOW DO TABLE SHORTER
+// function addElement(childElType, childContent, parentEl) {
+//      var childElement = document.createElement(childElType);
+//      childElement.textContent = childContent;
+//      parentEl.appendChild(childElement);
+//      return childElement   
+// }
+
 // TABLE MAKING
 var table = document.getElementById('tableContainer');
 var tbodyEl = document.createElement('tbody');
@@ -62,6 +70,7 @@ var tableHeader = function() {
     var thEl = document.createElement('th');
     thEl.textContent = 'Location';
     trEl.appendChild(thEl);
+//  addElement('th', 'Location', 'trEl')    
 
     for (var i = 0; i < Store.hours.length; i++) {
         thEl = document.createElement('th');

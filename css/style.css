@@ -15,6 +15,29 @@ header {
     padding-top: 10px;
 }
 
+footer {
+    display: inline-block;
+    margin: auto 0px;
+    width: 100%;
+    height: 200px;
+    background-color: seashell;
+    padding-bottom: 0px;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+#footerLocation {
+    display: inline-block;
+}
+#footerHours {
+    display: inline-block;
+}
+#footerContact {
+    display: inline-block;
+}
+
 h1 {
     font-family: 'Lobster', cursive;
     font-size: 50px;
@@ -93,6 +116,7 @@ tr:hover {
 
 /* Forms */
 fieldset {
+    width: 50%;
     border: 1px solid #21231E;
     border-radius: 10px;
     padding: 20px;
