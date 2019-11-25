@@ -81,6 +81,7 @@ p, address {
 }
 
 #fishCollage {
+    margin-top: 5px;
     align-items: center;
     border: #21231E 2px solid;
     padding: 2px;
@@ -93,6 +94,23 @@ p, address {
     margin-bottom: 15px;
     display: inline-block;
     width: 30%;
+}
+
+/* Merch  */
+#merchContainer {
+    border-bottom: #21231E 1px solid;
+    text-align: center;
+}
+
+#merchContainer>h2 {
+    margin-top: 20px;
+}
+
+#merchContainer img {
+    height: 250px;
+    margin: 20px 30px;
+    border: solid #21231E 2px;
+    padding: 2px;
 }
 
 /* locations and map */
@@ -206,6 +224,9 @@ fieldset {
     border: 1px solid #21231E;
     border-radius: 10px;
     padding: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
 }
 
 legend {
@@ -218,6 +239,14 @@ legend {
 
 input:focus {
     border: 2px #21231E;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #AD5334;
+    border-style: none;
+    color: white;
 }
 
 button:hover {
